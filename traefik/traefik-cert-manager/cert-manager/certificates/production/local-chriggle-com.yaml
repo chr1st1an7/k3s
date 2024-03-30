@@ -1,0 +1,15 @@
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: local-chriggle-com
+  namespace: default
+spec:
+  secretName: local-chriggle-com-tls
+  issuerRef:
+    name: letsencrypt-production
+    kind: ClusterIssuer
+  commonName: "local.chriggle.com"
+  dnsNames:
+  - "local.chriggle.com"
+  - "*.local.chriggle.com"
