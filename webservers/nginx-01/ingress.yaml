@@ -2,7 +2,7 @@
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
-  name: nginx
+  name: nginx-01
   namespace: default
   annotations: 
     kubernetes.io/ingress.class: traefik-external
@@ -13,7 +13,7 @@ spec:
     - match: Host(`nginx-01.local.chriggle.com`)
       kind: Rule
       services:
-        - name: nginx
+        - name: nginx-01
           port: 80
       middlewares:
         - name: default-headers
