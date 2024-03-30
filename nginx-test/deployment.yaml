@@ -3,7 +3,6 @@ kind: Namespace
 metadata:
   name: nginx-test
 ---
----
 kind: Deployment
 apiVersion: apps/v1
 metadata:
